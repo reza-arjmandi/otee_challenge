@@ -3,10 +3,9 @@
 /**
  * Solves the "How many squares?" problem on an infinite lattice with an n x n square.
  * 
- * This function addresses the problem by recognizing the pattern in the number of squares
- * that can be formed within an n x n grid. It's important to understand that the total
- * number of squares is not limited to the n^2 individual 1 x 1 squares. It also includes
- * larger squares formed by combining these smaller squares.
+ * This function calculates the number of squares that can be formed within an n x n grid. 
+ * It's important to understand that the total number of squares is not limited to the n^2 
+ * individual 1 x 1 squares. It also includes larger squares formed by combining these smaller squares.
  * 
  * For example:
  * - For n = 1, there's exactly 1 square.
@@ -19,7 +18,7 @@
  * 
  * Therefore, the total number of squares in an n x n grid is the sum of the squares of the
  * integers from 1 up to n. This sum can be calculated using the formula:
- * ∑_{k=1}^{n} k^2 = n(n + 1)(2n + 1)/6
+ * n(n + 1)(2n + 1)/6
  * 
  * This formula accurately calculates the total number of squares that can be formed within an
  * n x n square on an infinite lattice. You can use this function to find the total number of
@@ -28,7 +27,7 @@
  * @param n The size of the grid (n x n), where n is a positive integer.
  * @return The total number of squares that can be formed within the grid.
  */
-int calculateTotalSquares(int n)
+inline int totalSquares(int n)
 {
     return n * (n + 1) * (2 * n + 1) / 6;
 }
